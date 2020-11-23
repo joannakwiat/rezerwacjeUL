@@ -1,0 +1,97 @@
+@font-face {
+    font-family: BuloRounded-Bold;
+    src: url('../BuloRounded-Bold.ttf');
+}
+@font-face {
+    font-family: Averta-Bold;
+    src: url('../Averta-Bold.otf');
+}
+@font-face {
+    font-family: Averta-Regular;
+    src: url('../Averta-Regular.otf');
+}
+body, html {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body{
+    background: linear-gradient(180deg, #2B6788 2.08%, rgba(92, 143, 172, 0.569149) 100%);
+    margin: 0;
+}
+.container
+{
+    margin: 2em;
+    padding: 2em;
+    background: white;
+    border-radius: 1em;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-family: BuloRounded-Bold;
+    font-size: 16px;
+    margin-left:1em;
+
+    ul {
+        display:flex;
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        margin-right: 1.5em;
+        margin: auto 1.5em auto 0;
+    }
+    button {
+        background: rgba(238, 46, 42, 0.05);
+        font-family: BuloRounded-Bold;
+        font-size: 16px;
+        border: 3px solid #EE2E2A;
+        padding: .6em .8em .8em;
+        box-sizing: border-box;
+        border-radius: 25px;
+        color:red;
+    }
+}
+.inner {
+    margin:4em 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    z-index: 1;
+    width:30%;
+    h1 {
+       font-size: 48px; 
+       font-family: Averta-Bold;
+       margin-bottom: 1em;
+    }
+    .subtitle {
+        font-size: 25px; 
+        font-family: Averta-Regular; 
+    }
+    .przycisk  {
+        width:100%;
+    }
+    button {
+        font-family: BuloRounded-Bold;
+        font-size: 34px;
+        color: white;
+        background: #2B6788;
+        box-shadow: 0px 13px 27px -1px rgba(0, 0, 0, 0.25);
+        border-radius: 43px;
+        padding: 5px 20px 15px;
+        margin: 1em 2.2em;
+
+  }
+}
+.right {
+width:70%;
+    img {
+        float: right;
+        z-index:-1;
+    }
+}
