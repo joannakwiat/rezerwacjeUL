@@ -142,6 +142,7 @@ body {
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
+                    max-width: 200px;
                     width: 60%;
                     bottom: 10%;
                     font-size: 1.7em;
@@ -181,29 +182,62 @@ ul {
 }
 
 @media screen and (min-width: 1025px) {
-    .inner {
-        margin:4em 2em;
-        display: flex;
-        justify-content: space-between;
-    }
-
+    
     .logo{
         display:none;
     }
+
     .menu{
         display:none;
     }
+
     body {
-    
+        background: linear-gradient(180deg, #2B6788 2.08%, rgba(92, 143, 172, 0.569149) 100%);
+        
         #container {
-            width: auto;
+            width: 85%;
             height: auto;
             position: relative;
-            margin: 2em;
+            margin-top: 2em;
+            max-width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
             padding: 2em;
             background: white;
-            border-radius: 1em;
+            border-radius: 0;
     
+            .inner {
+                margin:auto;
+                margin-bottom: 5em;
+                display: flex;
+                justify-content: space-between;
+                
+                .top {
+                    display: block;
+                    margin-right: 10px;
+                    margin-top: 30px;
+                    
+                    .pic {
+                        width: 100%;
+                    }
+                }
+                
+        
+                .bottom{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: right;
+                    padding-top: 80px;
+                    padding-right: 50px;
+                    width: 25%;
+
+                    .subtitle {
+                        padding-bottom: 80px;
+                    }
+                }
+            }
+
             .navbar{
                 display:none;
             }
@@ -222,16 +256,16 @@ ul {
                 }
                 ul li {
                     margin-right: 1.5em;
-                    margin: auto 1.5em auto 0;
+                    margin: auto 1.7em auto 0;
                 }
                 button {
                     background: rgba(238, 46, 42, 0.05);
                     font-family: BuloRounded-Bold;
-                    font-size: 16px;
+                    font-size: 17px;
                     border: 3px solid #EE2E2A;
-                    padding: .6em .8em .8em;
+                    padding: .4em 20px .6em;
                     box-sizing: border-box;
-                    border-radius: 25px;
+                    border-radius: 30px;
                     color:red;
                 }
             }
