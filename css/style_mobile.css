@@ -69,7 +69,6 @@ body #container .sidenav {
   right: 0;
   background-color: #17191B;
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -80,7 +79,6 @@ body #container .sidenav a {
   font-size: 20px;
   color: #818181;
   display: block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -99,8 +97,7 @@ body #container .sidenav #profileImg {
   position: absolute;
   right: 15%;
   bottom: 20%;
-  -webkit-mask-image: url(/src/maska.svg);
-          mask-image: url(/src/maska.svg);
+  mask-image: url(/src/maska.svg);
 }
 
 body #container .sidenav #profileName {
@@ -148,6 +145,7 @@ body #container .inner .bottom .zaczynamy_button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 200px;
   width: 60%;
   bottom: 10%;
   font-size: 1.7em;
@@ -156,8 +154,7 @@ body #container .inner .bottom .zaczynamy_button {
   padding: 10px 30px 15px 30px;
   border-radius: 40px;
   background: #2B6788;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .top {
@@ -179,66 +176,81 @@ ul {
 }
 
 @media screen and (min-width: 1025px) {
-  .inner {
-    margin: 4em 2em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
   .logo {
     display: none;
   }
   .menu {
     display: none;
   }
+  body {
+    background: linear-gradient(180deg, #2B6788 2.08%, rgba(92, 143, 172, 0.569149) 100%);
+  }
   body #container {
-    width: auto;
+    width: 85%;
     height: auto;
     position: relative;
-    margin: 2em;
+    margin-top: 2em;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2em;
     background: white;
-    border-radius: 1em;
+    border-radius: 0;
+  }
+  body #container .inner {
+    margin: auto;
+    margin-bottom: 5em;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #container .inner .top {
+    display: block;
+    margin-right: 10px;
+    margin-top: 30px;
+  }
+  body #container .inner .top .pic {
+    width: 100%;
+  }
+  body #container .inner .bottom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    padding-top: 80px;
+    padding-right: 50px;
+    width: 25%;
+  }
+  body #container .inner .bottom .subtitle {
+    padding-bottom: 80px;
   }
   body #container .navbar {
     display: none;
   }
   body #container .navbar_pulpit {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     padding: 1em;
     font-family: BuloRounded-Bold;
     font-size: 16px;
     margin-left: 1em;
   }
   body #container .navbar_pulpit ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0;
   }
   body #container .navbar_pulpit ul li {
     margin-right: 1.5em;
-    margin: auto 1.5em auto 0;
+    margin: auto 1.7em auto 0;
   }
   body #container .navbar_pulpit button {
     background: rgba(238, 46, 42, 0.05);
     font-family: BuloRounded-Bold;
-    font-size: 16px;
+    font-size: 17px;
     border: 3px solid #EE2E2A;
-    padding: .6em .8em .8em;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border-radius: 25px;
+    padding: .4em 20px .6em;
+    box-sizing: border-box;
+    border-radius: 30px;
     color: red;
   }
 }
-/*# sourceMappingURL=style_mobile.css.map */
