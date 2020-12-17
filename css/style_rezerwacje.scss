@@ -1,0 +1,378 @@
+@font-face {
+    font-family: BuloRounded-Bold;
+    src: url('../BuloRounded-Bold.ttf');
+}
+@font-face {
+    font-family: Averta-Bold;
+    src: url('../Averta-Bold.otf');
+}
+@font-face {
+    font-family: Averta-Regular;
+    src: url('../Averta-Regular.otf');
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+$ULcolor: #EE2E2A;
+$ULlightcolor: #FF7B78;
+$secondULcolor: #2B6788;
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Averta-Bold';
+    margin: 0;
+    background: $secondULcolor;
+
+    #container {
+        height: 100%;
+
+        .decoration{
+            display: none;
+        }
+
+        .navbar{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            margin-bottom: 50px;
+
+            .logo{
+                width: 80%;
+                float: left;
+                color: #FFF;
+            }
+
+            .menu{
+                width: 10%;
+                margin-top: 2%;
+                float: right;
+            }
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            text-align: right;
+            top: 0;
+            right: 0;
+            background-color: #17191B;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+
+            a {
+                padding: 10px 15% 8px 32px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #f1f1f1;
+                  }
+
+            }
+
+            .closebtn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 36px;
+            }
+
+            #profileImg{
+                position: absolute;
+                right: 15%;
+                bottom: 20%;
+                mask-image: url(/src/maska.svg);
+            }
+
+            #profileName{
+                font-family: 'BuloRounded-Bold';
+                position: absolute;
+                right: 15%;
+                bottom: 15%;
+                color: #f1f1f1;
+                font-size: 25px;
+            }
+
+        }   
+
+        .inner{
+            border-radius: 30px 30px 0px 0px;
+            background: #FFF;
+            height: 100%;
+
+            .top{
+                font-family: 'BuloRounded-Bold';
+                color: black;
+                font-size: 28px;
+
+                .help{
+                    display: block;
+                    float: right;
+                    margin-right: 10px;
+                }
+                
+                .backbtn{
+                    background-color:white;
+                    font-family: 'BuloRounded-Bold';
+                    border: none;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 28px;
+                    cursor: pointer;
+                    float: left;
+
+                    img {
+                        width: 15px;
+                        margin-right: 15px;
+                        margin-bottom: -2px;
+                    }
+                }
+            }
+
+            .center{
+                clear: both;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%;
+                text-align: center;
+                font-size: 30px;
+                margin-top: 35%;
+
+                input[list]{
+                    display: block;
+                    width: 85%;
+                    margin-left:auto;
+                    margin-right:auto;
+                    font-family: 'Averta-Regular';
+                    font-size: 20px;
+                    background: #fff;
+                    padding: 10px 20px 10px 20px;
+                    margin-top: 50px;
+                    border-radius: 5px;
+                    color: #666;
+                    border: none;
+                    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.25);
+                }
+                #next{
+                    font-family: 'BuloRounded-Bold';
+                    text-align: center;
+                    width: 180px;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 35px;
+                    color: white;
+                    background: rgba(43, 103, 136, 0.5);
+                    box-shadow: 0px 13px 27px -1px rgba(0, 0, 0, 0.25);
+                    border-radius: 43px;
+                    padding: 3px 0px 9px;
+                    margin-top: 10%;
+                    margin-right: 10%;
+                    float:right;
+
+                    img{
+                        width: 15px;
+                        margin-left: 15px;
+                        margin-bottom: -2px;
+                    }
+                }
+            }
+
+            .bottom{
+                display: block;
+                width:85%;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top: 35%;
+
+                .laptop{
+                    position: relative;
+                    display: block;
+                    float: left;
+                    width: 70%;
+                }
+                .logo_red{
+                    position: relative;
+                    display: block;
+                    float: right;
+                    width: 15%;
+                    margin-top: 30%;
+                }
+            }
+        }
+   
+    }
+}
+
+
+
+.top{
+    max-height: 50%;
+    padding: 5% 5% 0%;
+ 
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    display: none;
+}
+
+.navbar_pulpit {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+    
+    .logo{
+        display:none;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    body {
+        background: linear-gradient(#2B6788 0%, rgba(83, 136, 165, 0.647069) 100%);
+                
+        #container {
+            width: 85%;
+            height: auto;
+            position: relative;
+            margin-top: 2em;
+            max-width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
+            
+            .decoration{
+                display: block;
+                width: 30%;
+                float: left;
+                height: 700px;
+                background:#CDDCE1; 
+                border-radius: 30px 0 0 30px; 
+                margin-top: 20px;
+                
+                .logo_dec{
+                    margin-left:30px; 
+                    margin-top:30px; 
+                    width:50%;
+                }
+
+                .text1_dec{
+                    float:right;
+                    margin-right:30px; 
+                    margin-top:50px; 
+                }
+
+                .text2_dec{
+                    float:right;
+                    width: 60%;
+                    margin-right:60px; 
+                    margin-top:20px; 
+                }
+
+                .laptop_dec{
+                    margin-top: 200px;
+                    margin-left: 20px;
+                    width: 90%;
+                }
+
+            }
+            .inner {  
+                display: block;
+                float: left;
+                width: 70%;
+                margin-top: 20px;
+                background:#FFF; 
+                border-radius: 0 30px 30px 0; 
+                height: 700px;
+                
+                .center{
+                    margin-top: 15%;
+
+                    #next{
+                        font-size: 30px;
+                    }
+                }
+                .bottom{
+                    .laptop{
+                        display: none;
+                    }
+                    .logo_red{
+                        display: none;
+                    }
+                }
+            }
+
+            .navbar{
+                display:none;
+            }
+            .navbar_pulpit{
+                display: flex;
+                justify-content: space-between;
+                padding:5px 30px;
+                border-radius: 30px;
+                font-family: BuloRounded-Bold;
+                font-size: 16px;
+                
+                background-color: #FFF;
+
+                .student{
+                        ul{
+                            li{
+                                &:last-child{
+                                    font-size: 22px;
+                                    margin-top: -5px;
+                                    margin-left: -5px;
+                                }
+                            }
+                        }
+                        
+                    }
+                ul {
+                    display:flex;
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        margin-right: 1.5em;
+                        margin: auto 1em auto 1em; 
+                    }
+
+                    
+                }
+
+                button {
+                    background: rgba(238, 46, 42, 0.05);
+                    font-family: BuloRounded-Bold;
+                    font-size: 17px;
+                    border: 3px solid #EE2E2A;
+                    padding: .4em 20px .6em;
+                    box-sizing: border-box;
+                    border-radius: 30px;
+                    color:red;
+                }
+            }
+        }
+    }
+}
