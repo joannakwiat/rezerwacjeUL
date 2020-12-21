@@ -72,6 +72,7 @@ body #container .sidenav {
   right: 0;
   background-color: #17191B;
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -82,6 +83,7 @@ body #container .sidenav a {
   font-size: 20px;
   color: #818181;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -100,7 +102,8 @@ body #container .sidenav #profileImg {
   position: absolute;
   right: 15%;
   bottom: 20%;
-  mask-image: url(/src/maska.svg);
+  -webkit-mask-image: url(/src/maska.svg);
+          mask-image: url(/src/maska.svg);
 }
 
 body #container .sidenav #profileName {
@@ -172,7 +175,8 @@ body #container .inner .center input[list] {
   border-radius: 5px;
   color: #666;
   border: none;
-  box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.25);
 }
 
 body #container .inner .center #next {
@@ -184,7 +188,8 @@ body #container .inner .center #next {
   font-size: 35px;
   color: white;
   background: rgba(43, 103, 136, 0.5);
-  box-shadow: 0px 13px 27px -1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 13px 27px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 13px 27px -1px rgba(0, 0, 0, 0.25);
   border-radius: 43px;
   padding: 3px 0px 9px;
   margin-top: 10%;
@@ -247,6 +252,7 @@ ul {
     display: none;
   }
   body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#2B6788), to(rgba(83, 136, 165, 0.647069)));
     background: linear-gradient(#2B6788 0%, rgba(83, 136, 165, 0.647069) 100%);
   }
   body #container {
@@ -313,8 +319,12 @@ ul {
     display: none;
   }
   body #container .navbar_pulpit {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 5px 30px;
     border-radius: 30px;
     font-family: BuloRounded-Bold;
@@ -327,6 +337,8 @@ ul {
     margin-left: -5px;
   }
   body #container .navbar_pulpit ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0;
@@ -341,8 +353,10 @@ ul {
     font-size: 17px;
     border: 3px solid #EE2E2A;
     padding: .4em 20px .6em;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 30px;
     color: red;
   }
 }
+/*# sourceMappingURL=style_rezerwacje.css.map */

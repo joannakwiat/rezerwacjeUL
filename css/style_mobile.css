@@ -69,6 +69,7 @@ body #container .sidenav {
   right: 0;
   background-color: #17191B;
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -79,6 +80,7 @@ body #container .sidenav a {
   font-size: 20px;
   color: #818181;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -97,7 +99,8 @@ body #container .sidenav #profileImg {
   position: absolute;
   right: 15%;
   bottom: 20%;
-  mask-image: url(/src/maska.svg);
+  -webkit-mask-image: url(/src/maska.svg);
+          mask-image: url(/src/maska.svg);
 }
 
 body #container .sidenav #profileName {
@@ -130,6 +133,16 @@ body #container .inner .bottom {
   width: 85%;
 }
 
+body #container .inner .bottom input[type="text"], body #container .inner .bottom input[type=password] {
+  padding: 15px;
+  border-radius: 50px;
+  border: 2px solid #EBEBEB;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
 body #container .inner .bottom .txt1 {
   font-size: 2.2em;
 }
@@ -154,7 +167,31 @@ body #container .inner .bottom .zaczynamy_button {
   padding: 10px 30px 15px 30px;
   border-radius: 40px;
   background: #2B6788;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body #container .inner .bottom .zaczynamy_button:hover, body #container .inner .bottom .zaloguj:hover {
+  background: #487d99;
+}
+
+body #container .inner .bottom .zaloguj {
+  font-family: 'BuloRounded-Bold';
+  display: block;
+  margin-left: auto;
+  border: none;
+  margin-right: auto;
+  max-width: 200px;
+  width: 100%;
+  bottom: 10%;
+  font-size: 1.7em;
+  text-align: center;
+  color: #FFF;
+  padding: 10px 30px 15px 30px;
+  border-radius: 40px;
+  background: #2B6788;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .top {
@@ -183,6 +220,7 @@ ul {
     display: none;
   }
   body {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(2.08%, #2B6788), to(rgba(92, 143, 172, 0.569149)));
     background: linear-gradient(180deg, #2B6788 2.08%, rgba(92, 143, 172, 0.569149) 100%);
   }
   body #container {
@@ -195,13 +233,17 @@ ul {
     margin-right: auto;
     padding: 2em;
     background: white;
-    border-radius: 0;
+    border-radius: 1em;
   }
   body #container .inner {
     margin: auto;
     margin-bottom: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   body #container .inner .top {
     display: block;
@@ -209,13 +251,12 @@ ul {
     margin-top: 30px;
   }
   body #container .inner .top .pic {
-    width: 100%;
+    width: 550px;
   }
   body #container .inner .bottom {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: right;
     padding-top: 80px;
     padding-right: 50px;
     width: 25%;
@@ -227,14 +268,20 @@ ul {
     display: none;
   }
   body #container .navbar_pulpit {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1em;
     font-family: BuloRounded-Bold;
     font-size: 16px;
     margin-left: 1em;
   }
   body #container .navbar_pulpit ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0;
@@ -249,8 +296,10 @@ ul {
     font-size: 17px;
     border: 3px solid #EE2E2A;
     padding: .4em 20px .6em;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 30px;
     color: red;
   }
 }
+/*# sourceMappingURL=style_mobile.css.map */

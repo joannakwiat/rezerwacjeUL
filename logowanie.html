@@ -17,22 +17,6 @@
         document.getElementById("Sidenav").style.width = "0";
     }
 
-    function ZalogujSie() {//zmienia "Zaloguj się" -> "Wyloguj się"
-        document.getElementById("login").style.display = "none";
-        document.getElementById("logout").style.display = "block";
-        var profileDetails = document.getElementById("profileImg");
-        profileDetails.style.display = "block";
-        document.getElementById("profileName").style.display = "block";
-    }
-
-    function WylogujSie() {//zmienia "Wyloguj się" -> "Zaloguj się"  
-        document.getElementById("logout").style.display = "none";
-        document.getElementById("login").style.display = "block";
-        var profileDetails = document.getElementById("profileImg");
-        profileDetails.style.display = "none";
-        document.getElementById("profileName").style.display = "none";
-    }
-
     function ChangeColor(x) { //do zmiany koloru flagi gdy klikniemy "english"
         if(x==0) document.getElementById("english").src="src/english_white.svg";
         if(x==1) document.getElementById("english").src="src/english.svg";
@@ -43,13 +27,13 @@
 <div id="container">
 
     <div class="navbar_pulpit">
-        <img src="src/logo.svg" alt="Uniwersytet Łódzki">
+        <a href="index.html">
+        <img src="src/logo.svg" alt="Uniwersytet Łódzki"></a>
         <ul>
             <li><a href="#">WYSZUKAJ SPOTKANIE</a></li>
             <li><a href="#">POCZTA</a></li>
             <li><a href="#">USOSWEB</a></li>
             <li><a href="#"> <img src="src/english.svg" alt="English"> ENGLISH</a></li>
-            <li><a href="logowanie.html"><button>ZALOGUJ SIĘ</button></li></a>
         </ul>
     </div>
 
@@ -58,8 +42,6 @@
         <div class="menu"><img src="src/menu.svg" alt="Menu" onclick="openNav()"></div>
     <div id="Sidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#" id="login" onclick="ZalogujSie()" style="color: #FF7B78"> ZALOGUJ SIĘ</a>
-        <a href="#" id="logout" onclick="WylogujSie()" style="display:none; color: #FF7B78">WYLOGUJ SIĘ</a>
         <a href="#">WYSZUKAJ SPOTKANIE</a>
         <a href="#">POCZTA</a>
         <a href="#">USOSWEB</a>
@@ -77,14 +59,21 @@
 
     <div class="inner">
         <div class="top">
-        <img src="src/vector.svg" alt="Obrazek" class="pic">
+        <img src="src/login.svg" alt="Obrazek" class="pic" width="550px">
         </div>
-        <div class="bottom" style="text-align: right;">
-
-            <h1 class="txt1"> Zarezerwuj spotkanie jednym kliknięciem</h1>
-            <p class="subtitle">System rezerwacji spotkań </br> z pracownikami UŁ</p>
-           <a href="rezerwacje1.html" class="zaczynamy_button">ZACZYNAMY!</a>
-
+        <div class="bottom">
+            
+            <h1 style="text-align: center;">Logowanie</h1>
+        <br><br>
+            <left><label for="email">Identyfikator</b></label></left><br>
+            <input type="text" placeholder="Identyfikator" name="email" id="email" required>
+        <br><br>
+            <label for="psw">Hasło</b></label><br>
+            <input type="password" placeholder="Hasło" name="psw" id="psw" required>
+            <br><br>
+            <a href="index.html">
+            <button type="submit" class="zaloguj">Zaloguj</button></a>
+        
         </div>
     </div>
 

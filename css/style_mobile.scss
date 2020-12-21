@@ -126,7 +126,14 @@ body {
                 margin-right: auto;
                 padding-top: 10%;
                 width: 85%;
-
+                input[type="text"],input[type=password] {
+                    padding: 15px;
+                    border-radius: 50px;
+                    border: 2px solid #EBEBEB;
+                    font-size: 18px;
+                    box-sizing: border-box; 
+                    width:100%;
+                }
                 .txt1{
                     font-size: 2.2em;
                 }
@@ -144,6 +151,26 @@ body {
                     margin-right: auto;
                     max-width: 200px;
                     width: 60%;
+                    bottom: 10%;
+                    font-size: 1.7em;
+                    text-align: center;
+                    color: #FFF;
+                    padding: 10px 30px 15px 30px;
+                    border-radius: 40px;
+                    background: $secondULcolor;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                .zaczynamy_button:hover,.zaloguj:hover{
+                        background: #487d99;
+                }
+                .zaloguj{
+                    font-family: 'BuloRounded-Bold';
+                    display: block;
+                    margin-left: auto;
+                    border: none;
+                    margin-right: auto;
+                    max-width: 200px;
+                    width: 100%;
                     bottom: 10%;
                     font-size: 1.7em;
                     text-align: center;
@@ -204,8 +231,7 @@ ul {
             margin-right: auto;
             padding: 2em;
             background: white;
-            border-radius: 0;
-    
+            border-radius: 1em;
             .inner {
                 margin:auto;
                 margin-bottom: 5em;
@@ -218,7 +244,7 @@ ul {
                     margin-top: 30px;
                     
                     .pic {
-                        width: 100%;
+                        width: 550px;
                     }
                 }
                 
@@ -227,7 +253,6 @@ ul {
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
-                    text-align: right;
                     padding-top: 80px;
                     padding-right: 50px;
                     width: 25%;
@@ -235,8 +260,10 @@ ul {
                     .subtitle {
                         padding-bottom: 80px;
                     }
+                   
                 }
             }
+            
 
             .navbar{
                 display:none;
