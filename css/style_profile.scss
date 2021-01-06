@@ -1,0 +1,441 @@
+@font-face {
+    font-family: BuloRounded-Bold;
+    src: url('../BuloRounded-Bold.ttf');
+}
+@font-face {
+    font-family: Averta-Bold;
+    src: url('../Averta-Bold.otf');
+}
+@font-face {
+    font-family: Averta-Regular;
+    src: url('../Averta-Regular.otf');
+}
+@font-face {
+    font-family: BuloRounded-Regular;
+    src: url('../BuloRounded-Regular.ttf');
+}
+
+@font-face {
+    font-family: Averta-Light;
+    src: url('../Averta-Light.otf');
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+$ULcolor: #EE2E2A;
+$ULlightcolor: #FF7B78;
+$secondULcolor: #2B6788;
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Averta-Bold';
+    margin: 0;
+    background: $secondULcolor;
+
+    #container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        header{
+            .navbar{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 85%;
+                padding-top: 1.5em;
+                padding-bottom: 1.5em;
+                margin-bottom: 10%;
+
+                .logo{
+                    width: 40%;
+                    float: left;
+                }
+
+                .menu{
+                    width: 10%;
+                    margin-top: 2%;
+                    float: right;
+                }
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                text-align: right;
+                top: 0;
+                right: 0;
+                background-color: #17191B;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+
+                a {
+                    padding: 10px 15% 8px 32px;
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: #818181;
+                    display: block;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: #f1f1f1;
+                    }
+
+                }
+
+                .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 36px;
+                }
+
+                #profileImg{
+                    position: absolute;
+                    right: 15%;
+                    bottom: 20%;
+                    mask-image: url(/src/maska.svg);
+                }
+
+                #profileName{
+                    font-family: 'BuloRounded-Bold';
+                    position: absolute;
+                    right: 15%;
+                    bottom: 15%;
+                    color: #f1f1f1;
+                    font-size: 25px;
+                }
+            }
+        
+
+        }   
+
+        section{
+            border-radius: 30px 30px 0px 0px;
+            background: #FFF;
+            height: 100%;
+            
+            .content{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: BuloRounded-Bold;
+
+                h1 {
+                    color: $ULcolor;
+                    position: relative;
+                    font-size: 22px;
+                    z-index: 1;
+                    overflow: hidden;
+                    text-align: left;
+                    clear: both;
+                }
+                h1:first-child {
+                    padding-top: 60px;
+                }
+
+                h1:after {
+                    position: absolute;
+                    top: 52%;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 1px;
+                    content: '\a0';
+                    background-color: #E8E8E8;
+                    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
+                }
+
+                .foto{
+                    display: block;
+                    position: relative;
+                    margin-top: -20px;
+                    margin-left: 5%;
+                    float: left;
+
+                    .circle {
+                        width: 130px;
+                        -webkit-mask-image: url(/src/maska.svg);
+                        mask-image: url(/src/maska.svg);
+                    }
+
+                    .strzalka {
+                        position: absolute;
+                        width: 30px;
+                        left: 70%;
+                        margin-top: 8px;
+                    }
+
+                    
+                }
+                .info { 
+                    display: block;
+                    margin-left: 170px;
+                    margin-top: -5px;
+                    font-family: BuloRounded-Regular;
+
+                     .info_n {
+                        font-family: BuloRounded-Bold;
+                        color: $secondULcolor;
+                        font-size: 25px;
+                        margin-top: -2px;
+                     }
+                }
+                .nextMeeting{
+                    background-color: #EE2E2A;
+                    margin-top: 60px;
+                    color: white;
+                    font-family: BuloRounded-Regular;
+                    padding: 15px;
+
+                    .withWho{
+                        display:inline;
+                        font-size: 17px;
+                        font-family: BuloRounded-Bold;
+                    }
+                    .when{
+                        display:inline;
+                        font-size: 17px;
+                        font-family: BuloRounded-Bold;
+                    }
+                }
+
+                #s1{
+                    display: block;
+                    float: left;
+                    font-family: Averta-Regular;
+                    font-size: 14px;
+                }
+
+                #s2{
+                    display: block;
+                    float: right;
+                    padding-left: 20%;
+                    font-size: 14px;
+                    font-family: Averta-Regular;
+                }
+
+                #s3{
+                    display: block;
+                    float: right;
+                    font-size: 14px;
+                    font-family: Averta-Regular;
+                }
+
+                article{
+                    clear: both;
+                    font-family: Averta-Light;
+                    
+                    .who{
+                        font-size: 20px;
+                        margin-top: 30px;
+                    }
+
+                    .when{
+                        display:inline;
+                        float: right;
+                        
+                    }
+
+                    .where{
+                        display:inline;
+                        float: right;
+                        padding-left: 10%;
+                    }
+                    
+                }
+
+                button{
+                    background-color:rgba(148, 148, 148, 0.1);
+                    border: none;
+                    border-radius: 30px;
+                    color: #000000;
+                    padding: 8px 16px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 16px;
+                    margin: 30px 2px 4px 2px;
+                    cursor: pointer;
+                    float: left;
+                    font-family: Averta-Light;
+                }
+
+
+                .potwierdzenie{
+                    padding: 12px 16px;
+                    width:40%;
+                    cursor:auto;
+                }
+                .anulowanie{
+                    font-family: BuloRounded-Bold;
+                    color:#EE2E2A;
+                    width:43%;
+                    padding: 12px 16px;
+                    background-color: rgba(238, 46, 42, 0.05);
+                }
+
+                .details{
+                    transition-timing-function: ease-out;
+                    display: none;
+                    width: 100%;
+                    height: 0px;
+                    z-index: 2;
+                }
+
+                .button, .button2{
+                    font-family: BuloRounded-Bold;
+                    display: block;
+                    width: 150px;
+                    text-align: center;
+                    font-size: 22px;
+                    background-color: $secondULcolor;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 10px 5px 14px;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+                    border-radius: 31px;
+                    
+                    a{
+                        color: white;
+                    }
+                }
+
+                .button2{
+                    background-color: rgba(238, 46, 42, 0.05);
+                    width: 170px;
+                    border: 3px solid rgba(238, 46, 42, 0.2);
+
+                    a{
+                        color:$ULcolor;
+                    }
+                }
+
+                .profesor{
+                    float: left;
+                    width: 80px;
+                    -webkit-mask-image: url(/src/maska.svg);
+                    mask-image: url(/src/maska.svg);
+                }
+
+                .info2{
+                    display: block;
+                    margin-top: 90px;
+                    margin-left: 100px;
+                }
+            }
+           
+        }
+   
+    }
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    display: none;
+}
+
+.navbar_pulpit {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+    
+    .logo{
+        display:none;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    body {
+        background: linear-gradient(180deg, #2B6788 2.08%, rgba(92, 143, 172, 0.569149) 100%);
+        background-attachment: fixed;
+        
+        #container {
+            width: 85%;
+            height: auto;
+            position: relative;
+            margin-top: 2em;
+            max-width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2em;
+            background: white;
+            border-radius: 1em;
+            
+            section {
+                margin:auto;
+                margin-bottom: 30px;
+                display: flex;
+                width: 65%;
+                justify-content: space-between;
+
+                .wylogowywanie{
+                    display: none;
+                }
+
+                .content{
+                    .foto{
+                        margin-left: 20%;
+                    }
+
+                    .info{
+                        padding-left: 100px;
+                    }
+                }
+            }
+            
+            header {
+                .navbar{
+                    display:none;
+                }
+
+                .navbar_pulpit{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1em;
+                    font-family: BuloRounded-Bold;
+                    font-size: 16px;
+                    margin-left:1em;
+
+                    ul {
+                        display:flex;
+                        list-style: none;
+                        padding: 0;
+                    }
+                    ul li {
+                        margin-right: 1.5em;
+                        margin: auto 1.7em auto 0;
+                    }
+                    button {
+                        background: rgba(238, 46, 42, 0.05);
+                        font-family: BuloRounded-Bold;
+                        font-size: 17px;
+                        border: 3px solid #EE2E2A;
+                        padding: .4em 20px .6em;
+                        box-sizing: border-box;
+                        border-radius: 30px;
+                        color:red;
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
