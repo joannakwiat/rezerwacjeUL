@@ -1,0 +1,14 @@
+extends base
+
+block content
+    h1 Wybierz spotkanie
+    section.main
+        .card-container
+            each employee in employees
+                .card
+                    .card__details
+                        h4.card__sub-heading= `Imie i nazwisko: ${employee.name}`
+                        h4.card__sub-heading= `Email: ${employee.email}`
+                        p.card__text= employee.faculty
+                    .card__footer
+                        a.btn.btn--green.btn--small(href=`/user/${employee.id}/meetings`) WYBIERZ

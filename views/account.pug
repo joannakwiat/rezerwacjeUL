@@ -1,0 +1,54 @@
+extends base
+
+//- mixin navItem(link, text, icon, active)
+//-     li(class=`${active? 'side-nav--active' : ''}`)
+//-         a(href=`${link}`)
+//-             svg
+//-                 use(xlink:href=`/img/icons.svg#icon-${icon}`)
+//-             | #{text}
+
+mixin navItem(link, text, active)
+    li(class=`${active? 'side-nav--active' : ''}`)
+        a(href=`${link}`)
+            | #{text}
+
+block content
+    main.main
+        .user-view
+
+            .user-view__content
+                .user-view__form-container
+                    h2.heading-secondary.ma-bt-md Twój profil
+
+                    //- Without API
+                    //- form.form.form-user-data(action='/submit-user-data' method='POST')
+
+                    //- With API
+                    form.form.form-user-data
+                        .form__group.form__photo-upload
+                            img.form__user-photo(src=`/img/users/${user.photo}`, alt='User photo')
+                            a.btn-text(href='') Wybierz nowe zdjęcie
+                        .form__group
+                            label.form__label(for='name') Imię i nazwisko
+                            input#name.form__input(type='text', value=`${user.name}`, required)
+                        .form__group.ma-bt-md
+                            label.form__label(for='email') Email
+                            input#email.form__input(type='email', value=`${user.email}`, required)
+                        
+                        .form__group.right
+                            button.btn.btn--small.btn--green Zapisz zmiany
+
+                .user-view__form-container
+                    h2.heading-secondary.ma-bt-md Pamiętaj o bezpieczeństwie! Zmień hasło
+                    form.form.form-user-password
+                        .form__group
+                            label.form__label(for='password-current') Obecne hasło
+                            input#password-current.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                        .form__group
+                            label.form__label(for='password') Nowe hasło
+                            input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                        .form__group.ma-bt-lg
+                            label.form__label(for='password-confirm') Wprowadź ponownie nowe hasło
+                            input#password-confirm.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                        .form__group.right
+                            button.btn.btn--small.btn--green.btn--save-password Zapisz hasło

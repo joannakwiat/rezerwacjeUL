@@ -1,0 +1,19 @@
+header.header
+    img#header_logo(src='/img/logo.svg' alt='UL logo')
+    nav.nav.nav--tours
+        a.nav__el(href='/') STRONA GŁÓWNA
+        - if(user !== undefined && user.role === 'student')
+            a.nav__el(href='/me/meetings') MOJE SPOTKANIA
+            a.nav__el(href='/allEmployees') LISTA PRACOWNIKÓW
+        - if(user !== undefined && user.role === 'employee')
+            a.nav__el(href='/me/meetings') MOJE SPOTKANIA
+            a.nav__el(href='/createMeeting') NOWE SPOTKANIE
+        if user
+            a.nav__el.nav__el--logout WYLOGUJ
+            a.nav__el(href='/me')
+                span MÓJ PROFIL
+                //- span= user.name.split(' ')[0] 
+        else
+            a.nav__el(href='/login') ZALOGUJ
+            a.nav__el.nav__el--cta(href='/signup') ZAREJESTRUJ SIĘ
+            //- nav.nav.nav--user został usuniety przed if user

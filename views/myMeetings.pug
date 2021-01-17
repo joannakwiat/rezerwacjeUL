@@ -1,0 +1,19 @@
+extends base
+
+block content
+    h1 Moje spotkania
+        section.main
+            .card-container2
+                each meeting in meetings
+                    .card.signingMeetingCard
+                        .card__details2
+                            h4.card__sub-heading= `Info: ${meeting.info}`
+                            h4.card__sub-heading= `Gdzie: ${meeting.place}`
+                            h4.card__sub-heading= `Kiedy: ${meeting.date}`
+                            h4.card__sub-heading= `Limit osób: ${meeting.limit}`
+                        .card__footer
+                            - let url
+                            - if(user.role === 'student')
+                                a.btn.btn--green.btn--small(href='#') Jesteś już zapisany
+                            - else
+                                a.btn.btn--green.btn--small(href=`/me/meetings/${meeting.id}`) Sprawdź listę studentów

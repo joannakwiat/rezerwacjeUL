@@ -1,0 +1,38 @@
+extends base
+
+//- mixin navItem(link, text, icon, active)
+//-     li(class=`${active? 'side-nav--active' : ''}`)
+//-         a(href=`${link}`)
+//-             svg
+//-                 use(xlink:href=`/img/icons.svg#icon-${icon}`)
+//-             | #{text}
+
+mixin navItem(link, text, active)
+    li(class=`${active? 'side-nav--active' : ''}`)
+        a(href=`${link}`)
+            | #{text}
+
+block content
+    main.main
+        .user-view
+
+            .user-view__content
+                .user-view__form-container
+                    h2.heading-secondary.ma-bt-md Stwórz nowe spotkanie
+
+                    //- With API
+                    form.form.form-create-meeting
+                        .form__group
+                            label.form__label(for='info') Info
+                            input#info.form__input(type='text', placeholder='Przykład: Serdecznie zapraszam na...', required)
+                        .form__group
+                            label.form__label(for='place') Place
+                            input#place.form__input(type='text', placeholder='Przykład: Budynek 2, pokój 103', required)
+                        .form__group
+                            label.form__label(for='date') Date
+                            input#date.form__input(type='text', placeholder='Przykład: 02/03/2021, 13:00', required)
+                        .form__group
+                            label.form__label(for='limit') Limit
+                            input#limit.form__input(type='number', placeholder='Przykład: 6', min=1, max=20, required)
+                        .form__group.right
+                            button.btn.btn--small.btn--green.btn--create-meeting Stwórz

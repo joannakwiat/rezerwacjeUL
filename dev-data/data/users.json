@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Mateusz Szatan",
+    "email": "mateusz@gmail.com",
+    "role": "student",
+    "password": "test1234",
+    "passwordConfirm": "test1234",
+    "faculty": "Wydział Matematyki i Informatyki",
+    "myMeetings": [],
+    "album": 385016
+  },
+  {
+    "name": "Michał Majonez",
+    "email": "michal@gmail.com",
+    "role": "student",
+    "password": "test1234",
+    "passwordConfirm": "test1234",
+    "faculty": "Wydział Matematyki i Informatyki",
+    "myMeetings": [],
+    "album": 123456
+  },
+  {
+    "name": "Aleksandra Stasiak",
+    "email": "aleksandra@gmail.com",
+    "role": "employee",
+    "password": "test1234",
+    "passwordConfirm": "test1234",
+    "faculty": "Wydział Matematyki i Informatyki",
+    "myMeetings": []
+  },
+  {
+    "name": "Darek Makowski",
+    "email": "darek@gmail.com",
+    "role": "employee",
+    "password": "test1234",
+    "passwordConfirm": "test1234",
+    "faculty": "Wydział Matematyki i Informatyki",
+    "myMeetings": []
+  }
+]

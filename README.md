@@ -1,2 +1,2 @@
-# rezerwacjeUL
-System rezerwacji spotkań z pracownikami UŁ
+# potezneRezerwacje
+Najbardziej aktualny system rezerwacji spotkań dla UŁ

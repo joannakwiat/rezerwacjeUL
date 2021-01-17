@@ -1,0 +1,14 @@
+extends base
+
+block content
+    h1 MY STUDENT ON THIS MEETING
+        section.main
+            .card-container
+                each student, i in meeting.users
+                    .card.signingMeetingCard
+                        .card__footer
+                            a.btn.btn--green.btn--small(href='#')= `Student ${i+1}`
+                        .card__details
+                            h4.card__sub-heading= `Name: ${student.name}`
+                            h4.card__sub-heading= `Email: ${student.email}`
+                            h4.card__sub-heading= `Faculty: ${student.faculty}`
